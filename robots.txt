@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /wp-admin/
 Allow: /wp-admin/admin-ajax.php
 
-Sitemap: https://sassastatuscheck.pages.dev/sitemap_index.xml
+Sitemap: https://350statuscheck.org.za/sitemap_index.xml

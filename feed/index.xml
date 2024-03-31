@@ -9,10 +9,10 @@
 
 <channel>
 	<title>SASSA STATUS</title>
-	<atom:link href="https://sassastatuscheck.pages.dev/feed/" rel="self" type="application/rss+xml" />
-	<link>https://sassastatuscheck.pages.dev/</link>
+	<atom:link href="https://350statuscheck.org.za/feed/" rel="self" type="application/rss+xml" />
+	<link>https://350statuscheck.org.za/</link>
 	<description></description>
-	<lastBuildDate>Sun, 31 Mar 2024 12:02:10 +0000</lastBuildDate>
+	<lastBuildDate>Sun, 31 Mar 2024 17:28:31 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -21,9 +21,9 @@
 	<generator>https://wordpress.org/?v=6.4.3</generator>
 
 <image>
-	<url>https://sassastatuscheck.pages.dev/wp-content/uploads/2024/03/icons8-layers-90-xxhdpi.png</url>
+	<url>https://350statuscheck.org.za/wp-content/uploads/2024/03/icons8-layers-90-xxhdpi.png</url>
 	<title>SASSA STATUS</title>
-	<link>https://sassastatuscheck.pages.dev/</link>
+	<link>https://350statuscheck.org.za/</link>
 	<width>32</width>
 	<height>32</height>
 </image> 
