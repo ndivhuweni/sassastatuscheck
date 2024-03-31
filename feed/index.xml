@@ -9,10 +9,10 @@
 
 <channel>
 	<title>SASSA STATUS</title>
-	<atom:link href="https:/feed/" rel="self" type="application/rss+xml" />
-	<link>https:/</link>
+	<atom:link href="https://sassastatuscheck.pages.dev/feed/" rel="self" type="application/rss+xml" />
+	<link>https://sassastatuscheck.pages.dev/</link>
 	<description></description>
-	<lastBuildDate>Fri, 29 Mar 2024 22:26:50 +0000</lastBuildDate>
+	<lastBuildDate>Sun, 31 Mar 2024 09:58:16 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -21,9 +21,9 @@
 	<generator>https://wordpress.org/?v=6.4.3</generator>
 
 <image>
-	<url>https:/wp-content/uploads/2024/03/icons8-layers-90-xxhdpi.png</url>
+	<url>https://sassastatuscheck.pages.dev/wp-content/uploads/2024/03/icons8-layers-90-xxhdpi.png</url>
 	<title>SASSA STATUS</title>
-	<link>https:/</link>
+	<link>https://sassastatuscheck.pages.dev/</link>
 	<width>32</width>
 	<height>32</height>
 </image> 
