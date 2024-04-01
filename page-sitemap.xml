@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="350statuscheck.org.za/main-sitemap.xsl"?>
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="sassastatuscheck.pages.dev/main-sitemap.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>350statuscheck.org.za/</loc>
+		<loc>sassastatuscheck.pages.dev/</loc>
 		<lastmod>2024-03-31T22:05:59+00:00</lastmod>
 	</url>
 	<url>
-		<loc>350statuscheck.org.za/privacy/</loc>
+		<loc>sassastatuscheck.pages.dev/privacy/</loc>
 		<lastmod>2024-04-01T11:59:36+00:00</lastmod>
 	</url>
 	<url>
-		<loc>350statuscheck.org.za/terms/</loc>
+		<loc>sassastatuscheck.pages.dev/terms/</loc>
 		<lastmod>2024-03-31T23:19:18+00:00</lastmod>
 	</url>
 	<url>
-		<loc>350statuscheck.org.za/contact/</loc>
+		<loc>sassastatuscheck.pages.dev/contact/</loc>
 		<lastmod>2024-03-31T12:02:10+00:00</lastmod>
 	</url>
 </urlset>

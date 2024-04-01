@@ -8,8 +8,8 @@
 <channel>
 	<title>
 	Comments for r350 status check	</title>
-	<atom:link href="350statuscheck.org.za/comments/feed/" rel="self" type="application/rss+xml" />
-	<link>350statuscheck.org.za/</link>
+	<atom:link href="sassastatuscheck.pages.dev/comments/feed/" rel="self" type="application/rss+xml" />
+	<link>sassastatuscheck.pages.dev/</link>
 	<description></description>
 	<lastBuildDate>Mon, 01 Apr 2024 11:59:36 +0000</lastBuildDate>
 	<sy:updatePeriod>
