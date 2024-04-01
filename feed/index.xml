@@ -9,10 +9,10 @@
 
 <channel>
 	<title>r350 status check</title>
-	<atom:link href="https://350statuscheck.org.za/feed/" rel="self" type="application/rss+xml" />
-	<link>https://350statuscheck.org.za/</link>
+	<atom:link href="350statuscheck.org.za/feed/" rel="self" type="application/rss+xml" />
+	<link>350statuscheck.org.za/</link>
 	<description></description>
-	<lastBuildDate>Sun, 31 Mar 2024 23:19:18 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 01 Apr 2024 11:59:36 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -21,9 +21,9 @@
 	<generator>https://wordpress.org/?v=6.4.3</generator>
 
 <image>
-	<url>https://350statuscheck.org.za/wp-content/uploads/2024/03/icons8-layers-90-xxhdpi.png</url>
+	<url>350statuscheck.org.za/wp-content/uploads/2024/03/icons8-layers-90-xxhdpi.png</url>
 	<title>r350 status check</title>
-	<link>https://350statuscheck.org.za/</link>
+	<link>350statuscheck.org.za/</link>
 	<width>32</width>
 	<height>32</height>
 </image> 
