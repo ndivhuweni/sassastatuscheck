@@ -11,10 +11,10 @@
 			<head>
 				<xsl:choose>
 					<xsl:when test="kml:kml">
-						<title>Locations Sitemap - SASSA STATUS</title>
+						<title>Locations Sitemap - r350 status check</title>
 					</xsl:when>
 					<xsl:otherwise>
-						<title>XML Sitemap - SASSA STATUS</title>
+						<title>XML Sitemap - r350 status check</title>
 					</xsl:otherwise>
 				</xsl:choose>
 				<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
