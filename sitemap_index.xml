@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="350statuscheck.org.za/main-sitemap.xsl"?>
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="https://350statuscheck.org.za/main-sitemap.xsl"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<sitemap>
-		<loc>350statuscheck.org.za/page-sitemap.xml</loc>
+		<loc>https://350statuscheck.org.za/page-sitemap.xml</loc>
 		<lastmod>2024-04-01T11:59:36+00:00</lastmod>
 	</sitemap>
 </sitemapindex>
