@@ -9,8 +9,8 @@
 
 <channel>
 	<title>r350 status check</title>
-	<atom:link href="sassastatuscheck.pages.dev/feed/" rel="self" type="application/rss+xml" />
-	<link>sassastatuscheck.pages.dev/</link>
+	<atom:link href="350statuscheck.org.za/feed/" rel="self" type="application/rss+xml" />
+	<link>350statuscheck.org.za/</link>
 	<description></description>
 	<lastBuildDate>Mon, 01 Apr 2024 11:59:36 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -21,9 +21,9 @@
 	<generator>https://wordpress.org/?v=6.4.3</generator>
 
 <image>
-	<url>sassastatuscheck.pages.dev/wp-content/uploads/2024/03/icons8-layers-90-xxhdpi.png</url>
+	<url>350statuscheck.org.za/wp-content/uploads/2024/03/icons8-layers-90-xxhdpi.png</url>
 	<title>r350 status check</title>
-	<link>sassastatuscheck.pages.dev/</link>
+	<link>350statuscheck.org.za/</link>
 	<width>32</width>
 	<height>32</height>
 </image> 
