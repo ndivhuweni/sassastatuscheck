@@ -8,8 +8,8 @@
 	>
 
 <channel>
-	<title>r350 status check</title>
-	<atom:link href="https://350statuscheck.org.za/feed/" rel="self" type="application/rss+xml" />
+	<title>Sassa Child Grant &#8211; r350 status check</title>
+	<atom:link href="https://350statuscheck.org.za/blog/sassa-child-grant/feed/" rel="self" type="application/rss+xml" />
 	<link>https://350statuscheck.org.za/</link>
 	<description></description>
 	<lastBuildDate>Fri, 12 Apr 2024 19:02:20 +0000</lastBuildDate>
@@ -22,7 +22,7 @@
 
 <image>
 	<url>https://350statuscheck.org.za/wp-content/uploads/2024/03/icons8-layers-90-xxhdpi.png</url>
-	<title>r350 status check</title>
+	<title>Sassa Child Grant &#8211; r350 status check</title>
 	<link>https://350statuscheck.org.za/</link>
 	<width>32</width>
 	<height>32</height>
