@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="https://350statuscheck.org.za/main-sitemap.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
+		<loc>https://350statuscheck.org.za/how-to-change-banking-details-for-sassa/</loc>
+		<lastmod>2024-05-02T10:48:47+00:00</lastmod>
+		<image:image>
+			<image:loc>https://350statuscheck.org.za/wp-content/uploads/2024/05/pexels-lucasandrade-19848073-scaled.webp</image:loc>
+		</image:image>
+	</url>
+	<url>
 		<loc>https://350statuscheck.org.za/learn-how-to-change-sassa-r370-payment-method/</loc>
-		<lastmod>2024-05-01T18:44:14+00:00</lastmod>
+		<lastmod>2024-05-01T21:01:09+00:00</lastmod>
 		<image:image>
 			<image:loc>https://350statuscheck.org.za/wp-content/uploads/2024/05/HOW-TO-CHANGE-SASSA-R350-PAYMENT-METHOD.webp</image:loc>
 		</image:image>
