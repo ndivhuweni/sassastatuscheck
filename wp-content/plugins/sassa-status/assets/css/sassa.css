@@ -1,0 +1,138 @@
+.sassa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #ffd985;
+  background: linear-gradient(to bottom, #ffe6af, #ffffff);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  padding: 20px;
+  border-radius: 6px;
+}
+.sassa *, .sassa ::after, .sassa ::before {
+  box-sizing: border-box;
+}
+.sassa__form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.sassa__button {
+  align-self: center;
+  background-color: #333 !important;
+  color: #fff !important;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 1px solid #333 !important;
+  border-radius: 0.375rem;
+  padding: 0.375rem 0.75rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  cursor: pointer;
+}
+.sassa__button:hover {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+.sassa__button:disabled {
+  background-color: #ccc !important;
+  color: #fff !important;
+  border: none !important;
+  cursor: not-allowed;
+}
+.sassa label {
+  color: #333;
+  font-weight: bold !important;
+  margin-bottom: 2px;
+}
+.sassa__input {
+  background-color: #fff !important;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  border: 1px solid #fbc02d !important;
+  border-radius: 6px !important;
+  padding: 10px 10px;
+  outline: none !important;
+  font-weight: bold;
+}
+.sassa__input::-moz-placeholder {
+  color: #b6b6b6;
+  opacity: 1;
+}
+.sassa__input::placeholder {
+  color: #b6b6b6;
+  opacity: 1;
+}
+.sassa__input::-ms-input-placeholder {
+  color: #b6b6b6;
+}
+.sassa__input:disabled {
+  background-color: #eee;
+  color: #b6b6b6;
+  cursor: not-allowed;
+}
+.sassa__group {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+.sassa__result {
+  display: none;
+  width: 100%;
+  margin-bottom: 15px !important;
+  border-radius: 6px;
+}
+.sassa__card__heading {
+  color: #505050;
+  font-weight: bolder;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.sassa__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sassa__list li {
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 2px dashed #f8c146;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+.sassa__list li:hover {
+  background-color: #f9f7f7;
+}
+.sassa__list__heading {
+  color: #f8c146;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.sassa__list__heading--approved {
+  color: #71a817;
+}
+.sassa__list__heading--declined {
+  color: #ff5858;
+}
+.sassa__list__heading--pending {
+  color: #484747;
+}
+.sassa__list__description {
+  font-size: 14px;
+  color: #7f7f7f;
+}
+.sassa__alert {
+  display: none;
+  color: #696969;
+  margin: 10px;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+}
+.sassa__alert--success {
+  color: #71a817;
+}
+.sassa__alert--error {
+  color: #ff5858;
+}
