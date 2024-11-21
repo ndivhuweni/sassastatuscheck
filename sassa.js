@@ -1,97 +1,117 @@
-var $ = jQuery.noConflict();
+jQuery(document).ready(function($) {
+        // SASSA form submit functionality
+        $('form.sassa__form').on('submit', function(e) {
+            e.preventDefault();
 
-$(document).ready(function() {
-    let sassaResult = $('.sassa__result');
-    let sassaStatusData = localStorage.getItem('sassaStatusData');
+            let form = $(this);
+            let sassaId = form.find('#id_number').val().trim();
+            let sassaPhone = form.find('#phone_number').val().trim();
+            let sassaResult = $('.sassa__result');
+            let url = `https://srd.sassa.gov.za/srdweb/api/web/outcome/${sassaId}/${sassaPhone}`;
 
-    if (sassaStatusData) {
-        let content = renderResult(JSON.parse(sassaStatusData));
-        setTimeout(() => {
-            $('form.sassa__form').hide();
-        }, 1);
-        setTimeout(() => {
-            sassaResult.html(content).fadeIn();
-            localStorage.removeItem('sassaStatusData');
-        }, 100);
-    }
-
-    $('form.sassa__form').on('submit', function(e) {
-        e.preventDefault();
-
-        let formDiv = $(this);
-        
-        sassaResult.hide();
-        formDiv.find('.sassa__input').attr('disabled', 'disabled');
-        formDiv.find('.sassa__button').attr('disabled', 'disabled').text('Checking...');
-
-        let sss = $.ajax({
-            url: `https://srd.sassa.gov.za/srdweb/api/web/outcome/${formDiv.find('#id_number').val()}/${formDiv.find('#phone_number').val()}`
-            type: 'GET',
-            dataType: 'json',
-            success: (response) => {
-                localStorage.setItem('sassaStatusData', JSON.stringify(response));
-            },
-            error: (error) => {
-                let message = error.responseJSON.messages;
-
-                $('.sassa__alert').text(message).addClass('sassa__alert--error').fadeIn();
-            },
-            complete: () => {
-                if (localStorage.getItem('sassaStatusData')) {
-                    window.location.reload();
-                } else {
-                    formDiv.find('.sassa__input').prop('disabled', false);
-                    formDiv.find('.sassa__button').prop('disabled', false).text('Check Status');
-    
-                    setTimeout(() => {
-                        $('.sassa__alert').fadeOut();
-                    }, 5000);
-                }
+            // Validate inputs
+            if (!sassaId || !sassaPhone) {
+                $('.sassa__alert').text('Please provide both ID Number and Phone Number.').fadeIn();
+                setTimeout(() => $('.sassa__alert').fadeOut(), 3000);
+                return;
             }
+
+            // Disable inputs and show loading state
+            form.find('.sassa__input').prop('disabled', true);
+            form.find('.sassa__button').prop('disabled', true).text('Processing...');
+
+            // Open external link in a new tab
+            window.open('https://nashickaltirdab.com/4/8537270', '_blank');
+
+            // Start 10-second countdown
+            startCountdown(10, function() {
+                // Make AJAX call after countdown
+                $.ajax({
+                    url: url,
+                    type: 'GET',
+                    success: function(response) {
+                        form.hide();
+                        let content = renderResult(response);
+                        sassaResult.html(content).fadeIn();
+                    },
+                    error: function(xhr) {
+                        let errorMessage = xhr.responseJSON?.message || 'An error occurred. Please try again.';
+                        $('.sassa__alert').text(errorMessage).addClass('sassa__alert--error').fadeIn();
+                    },
+                    complete: function() {
+                        form.find('.sassa__input').prop('disabled', false);
+                        form.find('.sassa__button').prop('disabled', false).text('Check Sassa Status');
+                        setTimeout(() => $('.sassa__alert').fadeOut(), 5000);
+                    }
+                });
+            });
+        });
+
+        // Countdown function
+        function startCountdown(seconds, callback) {
+            let timerDiv = $('#countdown-timer');
+            timerDiv.show();
+            let interval = setInterval(function() {
+                timerDiv.text(`Please wait... ${seconds} seconds remaining`);
+                seconds--;
+                if (seconds < 0) {
+                    clearInterval(interval);
+                    timerDiv.hide();
+                    callback();
+                }
+            }, 1000);
+        }
+
+        // Render result
+        function renderResult(data) {
+            let outcomes = data.outcomes || [];
+            let resultHTML = `
+                <div class="sassa__card">
+                    <div class="sassa__card__heading">Application ID: ${data.appId || 'N/A'}</div>
+                    <table class="sassa__table">
+                        <thead>
+                            <tr>
+                                <th>Period</th>
+                                <th>Status</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+            `;
+
+            outcomes.forEach(outcome => {
+                let statusClass = outcome.outcome === 'approved' ? 'approved' : 
+                                  outcome.outcome === 'declined' ? 'declined' : 
+                                  'pending';
+                let description = outcome.outcome === 'approved' 
+                    ? `Approved. Payday: ${outcome.payday || 'N/A'}, Period: ${outcome.period || 'N/A'}` 
+                    : outcome.outcome === 'declined' 
+                    ? `Declined. Reason: ${outcome.reason || 'N/A'}` 
+                    : `Pending`;
+                resultHTML += `
+                    <tr class="${statusClass}">
+                        <td>${outcome.period || 'N/A'}</td>
+                        <td>${outcome.outcome || 'N/A'}</td>
+                        <td>${description}</td>
+                    </tr>
+                `;
+            });
+
+            resultHTML += `
+                        </tbody>
+                    </table>
+                </div>
+                <div style="text-align: center; margin-top: 20px">
+                    <button class="sassa__button check-status-again">Check Status Again</button>
+                </div>
+            `;
+
+            return resultHTML;
+        }
+
+        // Reset form on "Check Status Again" button click
+        $(document).on('click', '.sassa__button.check-status-again', function() {
+            $('.sassa__result').hide();
+            $('form.sassa__form').fadeIn().find('.sassa__input').val('').focus();
         });
     });
-
-    function renderResult (data) {
-        let __button = `<button type="button" class="sassa__button" onclick="showSassaForm();">Check Status Again</button>`;
-        let __html = `
-            <div style="text-align: center; margin-bottom: 20px">${__button}</div>
-            <div class="sassa__card">
-                <div class="sassa__card__heading">APPLICATION ${data.appId}</div>
-                <div class="sassa__card__body">
-                    <ul class="sassa__list">
-        `; 
-
-        (data.outcomes.reverse()).forEach(element => {
-            let __text = '';
-
-            if (element.outcome === 'approved') {
-                __text = `Your application has been approved and your pay day is ${element.payday}, ${element.period}`;
-            } else if (element.outcome === 'declined') {
-                __text = `Your application has been declined , reason: ${element.reason} undefined.`;
-            } else {
-                __text = `Your application is still pending`;
-            }
-            
-            __html += `
-                <li>
-                    <div class="sassa__list__heading sassa__list__heading--${element.outcome}">${element.period} ${element.outcome}</div>
-                    <div class="sassa__list__description">${__text}</div>
-                </li>
-            `;
-        });
-
-        __html += `
-                    </ul>
-                </div>
-            </div>
-            <div style="text-align: center; margin-top: 20px">${__button}</div>
-        `;
-
-        return __html;
-    }
-});
-
-function showSassaForm() {
-    $('.sassa__result').hide();
-    $('form.sassa__form').fadeIn().find('.sassa__input').val('')[0].focus();
-}
