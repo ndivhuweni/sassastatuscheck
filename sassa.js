@@ -25,7 +25,7 @@ $(document).ready(function() {
         formDiv.find('.sassa__button').attr('disabled', 'disabled').text('Checking...');
 
         let sss = $.ajax({
-            url: `https://srd.sassa.gov.za/srdweb/api/web/outcome/${formDiv.find('#id_number').val()}/${formDiv.find('#phone_number').val()}`,
+            url: `https://srd.sassa.gov.za/srdweb/api/web/outcome/${sassaId}/${sassaPhone}`;
             type: 'GET',
             dataType: 'json',
             success: (response) => {
